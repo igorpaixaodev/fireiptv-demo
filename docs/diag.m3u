@@ -1,0 +1,11 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="diag.1" group-title="DIAG",DIAG 1 - Live Clock (master original)
+https://demo.unified-streaming.com/k8s/live/stable/live.isml/.m3u8
+#EXTINF:-1 tvg-id="diag.2" group-title="DIAG",DIAG 2 - Live Clock (playlist de midia)
+https://demo.unified-streaming.com/k8s/live/stable/live.isml/live-audio_eng=128000-video=1000000.m3u8
+#EXTINF:-1 tvg-id="diag.3" group-title="DIAG",DIAG 3 - Tears of Steel VOD (master com variants so de audio)
+https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+#EXTINF:-1 tvg-id="diag.4" group-title="DIAG",DIAG 4 - Apple bipbop (audio alternativo + legendas)
+https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_16x9/bipbop_16x9_variant.m3u8
+#EXTINF:-1 tvg-id="diag.5" group-title="DIAG",DIAG 5 - Big Buck Bunny (master simples, controle)
+https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8

@@ -20,3 +20,9 @@ URLs publicadas:
 Por que os filmes passam por wrapper: o FireIPTV classifica entradas M3U pela URL — só vira
 **Filme** quem tem `/movie/` no caminho. O wrapper é um master HLS hospedado em `/movie/` que
 aponta (URI absoluta) para os variants na origem. Séries são reconhecidas pelo `SxxEyy` no nome.
+
+## Lista de diagnóstico (`docs/diag.m3u`)
+
+Fora da lista da certificação; serve à issue `igorpaixaodev/fire-iptv#25`. Cada canal isola um
+formato de master HLS para descobrir qual derruba o FFmpegInteropX 1.1.0-pre42. O DIAG 5 é o
+controle (formato que sempre tocou).
