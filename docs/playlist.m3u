@@ -1,12 +1,10 @@
 #EXTM3U x-tvg-url="https://igorpaixaodev.github.io/fireiptv-demo/epg.xml"
 #EXTINF:-1 tvg-id="demo.live.clock" tvg-name="Live Clock 24/7" tvg-logo="https://igorpaixaodev.github.io/fireiptv-demo/img/demo.live.clock.png" group-title="Live - Test Channels",Live Clock 24/7
-https://demo.unified-streaming.com/k8s/live/stable/live.isml/.m3u8
-#EXTINF:-1 tvg-id="demo.live.akamai" tvg-name="Akamai Live Test" tvg-logo="https://igorpaixaodev.github.io/fireiptv-demo/img/demo.live.akamai.png" group-title="Live - Test Channels",Akamai Live Test
-https://cph-p2p-msl.akamaized.net/hls/live/2000341/test/master.m3u8
+https://demo.unified-streaming.com/k8s/live/stable/live.isml/live-audio_eng=128000-video=1000000.m3u8
+#EXTINF:-1 tvg-id="demo.live.scifi" tvg-name="Sci-Fi Shorts" tvg-logo="https://igorpaixaodev.github.io/fireiptv-demo/img/demo.live.scifi.png" group-title="Live - Open Movies",Sci-Fi Shorts
+https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/tears-of-steel-audio_eng=128002-video_eng=1501000.m3u8
 #EXTINF:-1 tvg-id="demo.live.bbb" tvg-name="Open Movies Channel" tvg-logo="https://igorpaixaodev.github.io/fireiptv-demo/img/demo.live.bbb.png" group-title="Live - Open Movies",Open Movies Channel
 https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
-#EXTINF:-1 tvg-id="demo.live.bipbop" tvg-name="Test Pattern HD" tvg-logo="https://igorpaixaodev.github.io/fireiptv-demo/img/demo.live.bipbop.png" group-title="Live - Open Movies",Test Pattern HD
-https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_16x9/bipbop_16x9_variant.m3u8
 #EXTINF:-1 tvg-id="demo.movie.bbb" tvg-name="Big Buck Bunny (2008)" tvg-logo="https://igorpaixaodev.github.io/fireiptv-demo/img/demo.movie.bbb.png" group-title="Open Movies",Big Buck Bunny (2008)
 https://igorpaixaodev.github.io/fireiptv-demo/movie/big-buck-bunny.m3u8
 #EXTINF:-1 tvg-id="demo.movie.tos" tvg-name="Tears of Steel (2012)" tvg-logo="https://igorpaixaodev.github.io/fireiptv-demo/img/demo.movie.tos.png" group-title="Open Movies",Tears of Steel (2012)
@@ -14,6 +12,6 @@ https://igorpaixaodev.github.io/fireiptv-demo/movie/tears-of-steel.m3u8
 #EXTINF:-1 tvg-id="demo.ep.s01e01" tvg-name="Open Movie Shorts S01E01 - Big Buck Bunny" group-title="Open Movie Shorts",Open Movie Shorts S01E01 - Big Buck Bunny
 https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
 #EXTINF:-1 tvg-id="demo.ep.s01e02" tvg-name="Open Movie Shorts S01E02 - Tears of Steel" group-title="Open Movie Shorts",Open Movie Shorts S01E02 - Tears of Steel
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/tears-of-steel-audio_eng=128002-video_eng=1501000.m3u8
 #EXTINF:-1 tvg-id="demo.ep.s01e03" tvg-name="Open Movie Shorts S01E03 - Elephants Dream" group-title="Open Movie Shorts",Open Movie Shorts S01E03 - Elephants Dream
 https://download.blender.org/ED/elephantsdream-480-h264-st-aac.mov

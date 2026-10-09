@@ -56,9 +56,8 @@ function New-Art([string]$id, [int]$w, [int]$h, [string]$title, [string]$kicker)
 
 # Canais: quadrado.
 New-Art 'demo.live.clock'  400 400 'Live Clock 24/7'     'DEMO LIVE'
-New-Art 'demo.live.akamai' 400 400 'Akamai Live Test'    'DEMO LIVE'
+New-Art 'demo.live.scifi'  400 400 'Sci-Fi Shorts'       'DEMO LIVE'
 New-Art 'demo.live.bbb'    400 400 'Open Movies Channel' 'DEMO LIVE'
-New-Art 'demo.live.bipbop' 400 400 'Test Pattern HD'     'DEMO LIVE'
 
 # Filmes: pôster 2:3.
 New-Art 'demo.movie.bbb' 400 600 'Big Buck Bunny' 'Blender Foundation - CC BY'

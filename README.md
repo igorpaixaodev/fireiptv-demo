@@ -1,7 +1,7 @@
 # FireIPTV — lista demo
 
 Fonte de teste para a certificação da Microsoft Store (10.3.3 "App Is Testable"). Só streams de
-teste públicos (Mux, Unified Streaming, Akamai, Apple) e filmes abertos da Blender Foundation (CC BY).
+teste públicos (Mux, Unified Streaming) e filmes abertos da Blender Foundation (CC BY).
 
 Esta pasta é o conteúdo do repositório **público** `igorpaixaodev/fireiptv-demo`, servido pelo
 GitHub Pages a partir de `main` / `docs`.

@@ -1,4 +1,4 @@
-<#
+﻿<#
 .SYNOPSIS
   Gera a lista demo do FireIPTV (M3U + EPG XMLTV + wrappers HLS dos filmes) em ./docs.
 
@@ -40,15 +40,16 @@ function Esc([string]$s) { [System.Security.SecurityElement]::Escape($s) }
 #   - o resto                -> Ao vivo
 # ---------------------------------------------------------------------------------------------
 
+# Canais ao vivo apontam para a playlist de MIDIA (um variant TS com audio junto), nao para o
+# master: o Live Clock pelo master (renditions de audio separadas + variants so de audio + I-frame)
+# derrubou o FFmpegInteropX com access violation. So o formato simples e comprovado entra aqui.
 $live = @(
     @{ Id = 'demo.live.clock';   Name = 'Live Clock 24/7';      Group = 'Live - Test Channels'
-       Url = 'https://demo.unified-streaming.com/k8s/live/stable/live.isml/.m3u8' }
-    @{ Id = 'demo.live.akamai';  Name = 'Akamai Live Test';     Group = 'Live - Test Channels'
-       Url = 'https://cph-p2p-msl.akamaized.net/hls/live/2000341/test/master.m3u8' }
+       Url = 'https://demo.unified-streaming.com/k8s/live/stable/live.isml/live-audio_eng=128000-video=1000000.m3u8' }
+    @{ Id = 'demo.live.scifi';   Name = 'Sci-Fi Shorts';        Group = 'Live - Open Movies'
+       Url = 'https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/tears-of-steel-audio_eng=128002-video_eng=1501000.m3u8' }
     @{ Id = 'demo.live.bbb';     Name = 'Open Movies Channel';  Group = 'Live - Open Movies'
        Url = 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8' }
-    @{ Id = 'demo.live.bipbop';  Name = 'Test Pattern HD';      Group = 'Live - Open Movies'
-       Url = 'https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_16x9/bipbop_16x9_variant.m3u8' }
 )
 
 # Variants com URI ABSOLUTA: o wrapper mora no Pages (para ter "/movie/" no caminho) e aponta
@@ -79,7 +80,7 @@ $episodes = @(
     @{ Id = 'demo.ep.s01e01'; Name = 'Open Movie Shorts S01E01 - Big Buck Bunny'
        Url = 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8' }
     @{ Id = 'demo.ep.s01e02'; Name = 'Open Movie Shorts S01E02 - Tears of Steel'
-       Url = 'https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8' }
+       Url = 'https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/tears-of-steel-audio_eng=128002-video_eng=1501000.m3u8' }
     @{ Id = 'demo.ep.s01e03'; Name = 'Open Movie Shorts S01E03 - Elephants Dream'
        Url = 'https://download.blender.org/ED/elephantsdream-480-h264-st-aac.mov' }
 )
@@ -125,18 +126,14 @@ $shows = @{
         @('Live Clock', 'A continuous live feed with a running clock, ideal for testing live playback.'),
         @('Signal Check', 'Live signal verification segment.'),
         @('Timecode Live', 'Live stream with burned-in timecode.'))
-    'demo.live.akamai' = @(
-        @('Live Test Feed', 'Akamai live HLS reference stream.'),
-        @('Network Test', 'Adaptive bitrate live test segment.'),
-        @('Live Loop', 'Continuous live test programming.'))
+    'demo.live.scifi' = @(
+        @('Tears of Steel', 'Warriors and scientists fight to save the world from destructive robots. Blender Foundation, CC BY 3.0.'),
+        @('Sci-Fi Shorts', 'Open-licensed science fiction short films.'),
+        @('Future Worlds', 'Visual effects showcase from open productions.'))
     'demo.live.bbb'    = @(
         @('Big Buck Bunny', 'A giant rabbit takes revenge on three bullying rodents. Blender Foundation, CC BY 3.0.'),
         @('Open Movies Hour', 'Short films released under open licenses.'),
         @('Animation Showcase', 'Highlights from open animated productions.'))
-    'demo.live.bipbop' = @(
-        @('Test Pattern', 'Apple HLS reference test pattern.'),
-        @('Color Bars', 'Video calibration test segment.'),
-        @('Audio Sync Test', 'Audio and video synchronization test.'))
 }
 
 $culture = [System.Globalization.CultureInfo]::InvariantCulture
